@@ -31,10 +31,10 @@ def pytest_configure(config: Config) -> None:
 
 
 # screenshot for a failing test:
-def pytest_exception_interact(report):
-    if report.failed:
-        allure.attach(body=driver.get_screenshot_as_png(), name="screenshot",
-                      attachment_type=allure.attachment_type.PNG)
+# def pytest_exception_interact(report):
+#     if report.failed:
+#         allure.attach(body=driver.get_screenshot_as_png(), name="screenshot",
+#                       attachment_type=allure.attachment_type.PNG)
 
 
 # @fixture
