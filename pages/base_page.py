@@ -8,6 +8,8 @@ class BasePage:
     def __init__(self, driver):
         self.driver: WebDriver = driver
 
+    def find_element(self, locator) -> object:
+        return self.driver.find_element(*locator)
 
     def fill_text(self, locator, text: str) -> None:
         self.driver.find_element(*locator).clear()

@@ -19,10 +19,10 @@ def driver_init(request):
     options.add_experimental_option("detach", True)
     driver = webdriver.Chrome(options=options)
     request.cls.driver = driver
-    driver.get("http://www.mytinytodo.net/demo/")
+    driver.get("https://www.saucedemo.com/")
     driver.maximize_window()
     yield
-    driver.quit()
+    # driver.quit()
 
 
 # to create allure results report after every run:
@@ -35,3 +35,9 @@ def pytest_exception_interact(report):
     if report.failed:
         allure.attach(body=driver.get_screenshot_as_png(), name="screenshot",
                       attachment_type=allure.attachment_type.PNG)
+
+
+# @fixture
+# def login():
+#     p_login = LoginPage(driver)
+#     p_login.login("standard_user", "secret_sauce")
