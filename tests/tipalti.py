@@ -29,10 +29,10 @@ time.sleep(1)
 driver.find_element(By.ID, "name").send_keys("Cookie")
 driver.find_element(By.ID, "email").send_keys("cookie@gmail.com")
 driver.find_element(By.ID, "message").send_keys("this is a message")
-# driver.find_element(By.CSS_SELECTOR, "[value='send']").click()
+driver.find_element(By.CSS_SELECTOR, "[value='Send']").click()
 
 
-input("click")
+input("click any key")
 
 
 

@@ -26,8 +26,8 @@ from requests import Response
 
 
 # to create allure results report after every run:
-def pytest_configure(config: Config) -> None:
-    config.option.allure_report_dir = "allure-results"
+# def pytest_configure(config: Config) -> None:
+#     config.option.allure_report_dir = "allure-results"
 
 
 # screenshot for a failing test:
